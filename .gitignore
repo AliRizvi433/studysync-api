@@ -1,1 +1,34 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# Environment variable files
 .env
+
+# VS Code
+.vscode/
+
+# macOS and Windows stuff
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# PyCharm
+.idea/
+
+# SQLite files (if you ever switch DBs)
+*.sqlite3
+*.db
+
+# Python egg info
+*.egg-info/
