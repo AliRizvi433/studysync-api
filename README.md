@@ -1,87 +1,98 @@
+
 # StudySync API
 
-![Python](https://img.shields.io/badge/python-3.12-blue)
-![Flask](https://img.shields.io/badge/flask-API-green)
-![License](https://img.shields.io/badge/license-MIT-lightgrey)
+A lightweight Flask-based REST API with a simple frontend for managing academic topics, notes, and completion status. This project helps users track study material efficiently using MongoDB and Python.
 
-A RESTful API for topic modeling and study synchronization.
+## Features
 
----
+- REST API with Flask for topic tracking
+- MongoDB database integration
+- Frontend interface using HTML, CSS, and vanilla JavaScript
+- Full CRUD support: Create, Read, Update, Delete
 
-## 🚀 Features
+## Endpoints
 
-- Topic modeling with custom models
-- RESTful endpoints for topic management
-- Easy configuration with `.env`
-- Modular code structure
+| Method | Endpoint            | Description                     |
+|--------|---------------------|---------------------------------|
+| GET    | `/topics`           | Get all study topics            |
+| POST   | `/topics`           | Add a new topic                 |
+| PUT    | `/topics/<id>`      | Update topic details/status     |
+| DELETE | `/topics/<id>`      | Delete a topic                  |
 
----
+## Sample POST Body
 
-## 📦 Project Structure
-
-```
-.
-├── app.py
-├── config.py
-├── models/
-│   └── topic_model.py
-├── routes/
-│   └── topic_routes.py
-├── requirements.txt
-├── .env
-└── README.md
+```json
+{
+  "title": "A* Search",
+  "subject": "AI",
+  "notes": "Best-first search with heuristics"
+}
 ```
 
----
+## Tech Stack
 
-## ⚙️ Setup
+- Flask
+- PyMongo
+- MongoDB
+- HTML + JavaScript + CSS
 
-1. **Clone the repository**
-    ```sh
-    git clone https://github.com/yourusername/studysync-api.git
-    cd studysync-api
-    ```
+## Installation
 
-2. **Create and activate a virtual environment**
-    ```sh
-    python -m venv studysync
-    source studysync/Scripts/activate  # On Windows
-    # or
-    source studysync/bin/activate      # On Unix/Mac
-    ```
+```bash
+git clone https://github.com/yourusername/studysync-api.git
+cd studysync-api
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
 
-3. **Install dependencies**
-    ```sh
-    pip install -r requirements.txt
-    ```
+Create a `.env` file:
+```env
+MONGO_URI=mongodb://localhost:27017/studysync
+```
 
-4. **Configure environment variables**
-    - Copy `.env.example` to `.env` and update as needed.
+## Running the Server
 
----
-
-## 🏃 Usage
-
-Start the API server:
-
-```sh
+```bash
 python app.py
 ```
 
-The API will be available at `http://localhost:5000/`.
+Visit: http://localhost:5000
 
----
+## Frontend
 
-## 📚 Endpoints
+The frontend is served via Flask using:
 
-- `GET /topics` — List all topics
-- `POST /topics` — Create a new topic
-- `GET /topics/<id>` — Get topic details
-- `PUT /topics/<id>` — Update a topic
-- `DELETE /topics/<id>` — Delete a topic
+- `templates/index.html`
+- `static/script.js` for JS logic
+- `static/style.css` for styling
 
----
+### How to Use
 
-## 🤝 Contributing
+1. Open http://localhost:5000
+2. Fill out the form to add a new topic
+3. View the list below with options to delete
+4. Data updates are sent to your Flask API in real time
 
-Contributions are welcome! Please open issues or submit pull requests.
+## Project Structure
+
+```
+studysync-api/
+├── app.py
+├── config.py
+├── models/
+├── routes/
+├── static/
+│   ├── script.js
+│   └── style.css
+├── templates/
+│   └── index.html
+├── .gitignore
+├── .env
+├── requirements.txt
+└── README.md
+```
+
+## Created by
+Ali Rizvi  
+API Fellowship Task 2  
