@@ -95,4 +95,4 @@ studysync-api/
 
 ## Created by
 Ali Rizvi  
-API Fellowship Task 2  
+for Keploy API Fellowship Task 2  
