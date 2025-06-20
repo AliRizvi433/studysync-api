@@ -85,5 +85,3 @@ The API will be available at `http://localhost:5000/`.
 ## 🤝 Contributing
 
 Contributions are welcome! Please open issues or submit pull requests.
-
----
