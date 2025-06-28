@@ -28,7 +28,7 @@ jobs:
 
       - name: 📥 Download Keploy CLI
         run: |
-          rm -f keploy           # Remove any existing keploy file
+          rm -rf keploy           # Remove any existing keploy file
           curl -LO https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz
           tar -xzf keploy_linux_amd64.tar.gz
           chmod +x keploy
