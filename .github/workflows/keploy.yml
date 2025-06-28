@@ -1,0 +1,38 @@
+name: Keploy Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  keploy-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: 📦 Install Dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 📥 Download Keploy CLI
+        run: |
+          curl -LO https://github.com/keploy/keploy/releases/latest/download/keploy_linux_amd64.tar.gz
+          tar -xzf keploy_linux_amd64.tar.gz
+          chmod +x keploy
+          sudo mv keploy /usr/local/bin/
+
+      - name: 🧪 Run Keploy Tests
+        run: |
+          keploy test -c "python app.py" --delay 5
