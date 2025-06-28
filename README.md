@@ -93,33 +93,6 @@ studysync-api/
 └── README.md
 ```
 
-## 🧪 Testing
-This project includes unit, integration, and API tests using Python’s built-in unittest framework.
-
-Tools Used
-
-  1. unittest – Core test framework for Python
-
-  2. unittest.mock – Used for mocking database operations in unit tests
-
-  3. coverage – To calculate test coverage
-
-How to Run Tests
-
-```bash
-python -m unittest discover -s tests
-```
-
-How to Check Coverage
-```bash
-coverage run -m unittest discover -s tests
-coverage report
-```
-
-Coverage Report
-    ![My Screenshot](screenshot.png)
-
-
 ## Created by
 Ali Rizvi  
 for Keploy API Fellowship Task 2  
