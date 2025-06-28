@@ -1,3 +1,4 @@
+![Keploy Test](https://github.com/AliRizvi433/studysync-api/actions/workflows/keploy.yml/badge.svg)
 
 # StudySync API
 
