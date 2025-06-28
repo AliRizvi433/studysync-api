@@ -93,6 +93,50 @@ studysync-api/
 └── README.md
 ```
 
+## 🧪 Testing
+This project includes unit, integration, and API tests using Python’s built-in unittest framework.
+
+Tools Used
+
+  1. unittest – Core test framework for Python
+
+  2. unittest.mock – Used for mocking database operations in unit tests
+
+  3. coverage – To calculate test coverage
+
+How to Run Tests
+
+```bash
+python -m unittest discover -s tests
+```
+
+How to Check Coverage
+```bash
+coverage run -m unittest discover -s tests
+coverage report
+```
+
+Coverage Report
+    ![My Screenshot](screenshot.png)
+
+
+## 🧪 Keploy Test Results
+
+Keploy captured 4 tests from real API traffic and replayed them automatically.
+
+| Test ID   | Status  |
+|-----------|---------|
+| test-1    | ✅ Passed |
+| test-2    | ❌ Failed |
+| test-3    | ❌ Failed |
+| test-4    | ❌ Failed |
+
+**Test Set:** `test-set-1`  
+⏱ Duration: `5.03s`  
+
+![Keploy Test Summary](assets/keploy-test-summary.png)
+
+
 ## Created by
 Ali Rizvi  
 for Keploy API Fellowship Task 2  
