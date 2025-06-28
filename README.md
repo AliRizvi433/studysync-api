@@ -135,7 +135,7 @@ Keploy captured 4 tests from real API traffic and replayed them automatically.
 **Test Set:** `test-set-1`  
 ⏱ Duration: `5.03s`  
 
-![Keploy Test Summary](assets/keploy-test-summary.png)
+![Keploy Test Summary](keploy-test-summary.png)
 
 
 ## Created by
